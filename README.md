@@ -27,7 +27,6 @@ Options:
     --walltime <walltime>         Walltime [30:00:00:00]
     --template <template>         Script template
     --outfile <outfile>           Output script
-    --verbose                     Verbosely print information
 
 Arguments:
     <command>        Command to submit
