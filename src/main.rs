@@ -42,7 +42,7 @@ struct Cli {
     template: Option<PathBuf>,
 
     /// Output script
-    #[arg(short, long)]
+    #[arg(short = 'o', long = "output")]
     outfile: Option<PathBuf>,
 
     /// Submit the job
