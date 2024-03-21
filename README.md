@@ -17,25 +17,26 @@ cargo build --release
 ## Usage
 
 ```
-qsub2 [OPTIONS] <command> [files]...
-
-Options:
-    --version        Show version information
-    --help           Show help information
-    -n, --name <name>             Job name
-    -@, --ncpus <ncpus>           CPU number [logical cpu number]
-    -m, --mem <mem>               Memory [5gb]
-    -q, --queue <queue>           Queue [batch]
-    --walltime <walltime>         Walltime [30:00:00:00]
-    --template <template>         Script template
-    --outfile <outfile>           Output script
+Usage: qsub2 [OPTIONS] <COMMAND> [FILES]...
 
 Arguments:
-    <command>        Command to submit
-    <files>...       Input files
+  <COMMAND>   Command to submit
+  [FILES]...  Input files
+
+Options:
+  -n, --name <NAME>          Job name
+  -@, --ncpus <NCPUS>        CPU number [logical cpu number]
+  -m, --mem <MEM>            Memory [5gb]
+  -q, --queue <QUEUE>        Queue [batch]
+  -w, --walltime <WALLTIME>  Walltime [30:00:00:00]
+  -t, --template <TEMPLATE>  Script template
+  -o, --output <OUTFILE>     Output script
+  -s, --submit               Submit the job
+  -h, --help                 Print help
+  -V, --version              Print version
 
 Example:
-    qsub2 -n my_job -@ 4 -m 10gb --template template.pbs --outfile job_script.sh echo "Hello, world!"
+    qsub2 -n my_job -@ 4 -m 10gb -o script.sh 'echo "Hello, world!"'
 ```
 
 ## Features
